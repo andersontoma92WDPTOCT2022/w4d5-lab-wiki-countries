@@ -19,7 +19,7 @@ function CountryDetails({ countries }) {
       <p>borders</p>
       {selectedCountry.borders.map((vizinho, index) => {
         return (
-          <div key={`${selectedCountry.alpha3Code}-${selectedCountry}`}>
+          <div key={selectedCountry.borders[index]}>
             <Link to={`/${selectedCountry.borders[index]}`}>{vizinho}</Link>
           </div>
         );
