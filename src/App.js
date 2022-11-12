@@ -2,13 +2,16 @@ import './App.css';
 import Navbar from './components/Navbar';
 import CountriesList from './components/CountriesList';
 import { Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
-import listaPaises from './countries.json';
+import { useEffect, useState } from 'react';
+//import listaPaises from './countries.json';
 import CountryDetails from './components/CountryDetails';
+import axios from 'axios';
 
 function App() {
-  const [countries, setCountries] = useState(listaPaises);
+  const [countries, setCountries] = useState([]);
+  //
 
+  //
   return (
     <div className="App">
       <Navbar />

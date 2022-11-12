@@ -1,7 +1,21 @@
 //import CountryDetails from './CountryDetails';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useEffect } from 'react';
 
+//
 function CountriesList({ countries, setCountries }) {
+  //
+  useEffect(() => {
+    axios
+      .get('https://ih-countries-api.herokuapp.com/countries')
+      .then((response) => {
+        console.log(response, '<-response');
+        setCountries(response.data);
+      });
+  }, []);
+  //
+
   return (
     <div>
       {countries.map((countrie) => {
