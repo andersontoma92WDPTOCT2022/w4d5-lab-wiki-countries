@@ -10,7 +10,7 @@ function CountriesList({ countries, setCountries }) {
     axios
       .get('https://ih-countries-api.herokuapp.com/countries')
       .then((response) => {
-        console.log(response, '<-response');
+        //console.log(response, '<-response');
         setCountries(response.data);
       });
   }, []);
